@@ -1,6 +1,6 @@
-(function () {
+// (function () {
 
-'use strict'; 
+// 'use strict'; 
 
 const app = angular.module('MyFoodApp', []);
 
@@ -13,4 +13,4 @@ app.controller('MyFirstcontroller', function($scope, $http){
 
 });
 
-})();
+// })();

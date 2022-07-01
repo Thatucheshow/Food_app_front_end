@@ -11,10 +11,12 @@
   <body ng-app="MyFoodApp">
     <h1>Upload Your favorite food</h1>
     <div ng-controller="MyFirstcontroller">
+        
       <div>
+        <li ng-repeat="food in allData">{{food.title}} <br> {{food.description}} <br><img src={{food.image}} alt=""> <br> {{food.price}} <br> {{food.date}} </li>
         <!-- {{allData[1].title}}  -->
-        {{allData.forEach(e)}}
-        <li *ngFor="let food of allData; let index = index">{{index}}</li>
+        <!-- {{allData}} -->
+        
           Name <br>
           <input type="text" placeholder="Item name" ng-model="name"> <br>
           <input type="text" placeholder="Item description"> <br>
