@@ -28,14 +28,22 @@ app.controller('MyFirstcontroller', function($scope, $http) {
 });
 
 app.controller('MyPostcontroller', function($scope, $http) {
-        $scope.postData = "";
-        $scope.postUrl = "https://ancient-beach-68054.herokuapp.com/api/foods"
-             $http({
-                 method: "POST",
-                 url: $scope.postUrl
-             }).then(response => {
-                 $scope.postData = response.data;
-             })
+        $scope.title = null;
+        $scope.description = null;
+        $scope.image = null;
+        $scope.price = null;
+        $scope.date = null;
+        $scope.postData = function (title, description, image, price, date) {
+            let data = {
+                title: title,
+                description: description,
+                image: image,
+                price: price,
+                
+            }
+        }
+
+        
 
 });
 
