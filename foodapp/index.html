@@ -2,31 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
     <script src="app.js" charset="utf-8"></script>
-    
+
     <title>Document</title>
   </head>
   <body ng-app="MyFoodApp">
     <h1>Upload Your favorite food</h1>
     <div ng-controller="MyFirstcontroller">
-        
-      <div>
-        <li ng-repeat="food in allData">{{food.title}} <br> {{food.description}} <br><img src={{food.image}} alt=""> <br> {{food.price}} <br> {{food.date}} </li>
-        <!-- {{allData[1].title}}  -->
-        <!-- {{allData}} -->
-        
-          Name <br>
-          <input type="text" placeholder="Item name" ng-model="name"> <br>
-          <input type="text" placeholder="Item description"> <br>
-          <input type="text" placeholder="Item image"> <br>
-          <input type="text" placeholder="item price"> <br>
-          <input type="text" placeholder="Date listed"> <br>
-          <button>Submit</button> <br>
-          
-        <img src={{allData[1].image}} alt="food_image">
+      <div ng-repeat="food in allData">
+        <h2>{{food.title}}</h2>
+        <img class="food_image" src="{{food.image}}" alt="" />
+        <h3>{{food.description}}</h3>
+        <h3> <span>Item Price:</span> <br> {{food.price}}</h3>
+        <h3> <span>Date Item was added:</span> <br>{{food.date}}</h3>
+        <br />
       </div>
+      <form action="">
+       <span>Item name</span> <br> <input type="text" placeholder="Item name" ng-model="name" /> <br />
+        <input type="text" placeholder="Item description" /> <br />
+        <input type="text" placeholder="Item image" /> <br />
+        <input type="text" placeholder="item price" /> <br />
+        <input type="text" placeholder="Date listed" /> <br />
+        <button>Submit</button> <br />
+    </form>
     </div>
   </body>
 </html>
