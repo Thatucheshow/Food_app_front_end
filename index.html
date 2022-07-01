@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+    
+    <title>Document</title>
+  </head>
+  <body ng-app="MyFoodApp">
+    <h1>Upload Your favorite food</h1>
+    <div ng-controller="MyFirstcontroller">
+      <div>
+        <!-- {{allData[1].title}}  -->
+        {{allData.forEach(e)}}
+        <li *ngFor="let food of allData; let index = index">{{index}}</li>
+          Name <br>
+          <input type="text" placeholder="Item name" ng-model="name"> <br>
+          <input type="text" placeholder="Item description"> <br>
+          <input type="text" placeholder="Item image"> <br>
+          <input type="text" placeholder="item price"> <br>
+          <input type="text" placeholder="Date listed"> <br>
+          <button>Submit</button> <br>
+          
+        <img src={{allData[1].image}} alt="food_image">
+      </div>
+    </div>
+  </body>
+</html>
