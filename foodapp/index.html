@@ -20,11 +20,22 @@
         <br />
       </div>
       <form action="">
-       <span>Item name</span> <br> <input type="text" placeholder="Item name" ng-model="name" /> <br />
-        <input type="text" placeholder="Item description" /> <br />
-        <input type="text" placeholder="Item image" /> <br />
-        <input type="text" placeholder="item price" /> <br />
-        <input type="text" placeholder="Date listed" /> <br />
+        <div>
+          <span>Item Name</span> <br> <input required type="text" placeholder="Item name" ng-model="name" /> <br />
+        </div>
+        <div>
+          <span>Item Description</span> <br><input required type="text" placeholder="Item description" /> <br />
+        </div>
+        <div>
+          <span>Image Link</span><br><input required type="text" placeholder="Item image" /> <br />
+        </div>
+        <div>
+          <span>Item Price</span><br><input required type="text" placeholder="item price" /> <br />
+        </div>
+        <div>
+          <span>Log Date</span><br><input type="date" placeholder="Date listed" /> <br />
+        </div>  <br> 
+        <input className="submitBtn" type="submit"></input>   
         <button>Submit</button> <br />
     </form>
     </div>
