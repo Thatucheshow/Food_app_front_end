@@ -39,7 +39,7 @@ app.controller('MyPostcontroller', function($scope, $http) {
                 description: description,
                 image: image,
                 price: price,
-                
+                date: date                
             };
         $http.post('https://ancient-beach-68054.herokuapp.com/api/foods', JSON.stringify(data)).then(function (response) {
             if (response.data)

@@ -21,22 +21,24 @@
       </div>
       <form action="">
         <div ng-controller="MyPostcontroller">
-          <span>Item Name</span> <br> <input required type="text" ng-model="title" /> <br />
+          <div>
+            <span>Item Name</span> <br> <input type="text" ng-model="title" /> <br />
+          </div>
+          <div>
+            <span>Item Description</span> <br><input type="text" ng-model="description" /> <br />
+          </div>
+          <div>
+            <span>Image Link</span><br><input type="text" ng-model="image" /> <br />
+          </div>
+          <div>
+            <span>Item Price</span><br><input type="text" ng-model="price" /> <br />
+          </div>
+          <div>
+            <span>Log Date</span><br><input type="date"  ng-model="date" /> <br />
+          </div>  <br>  
+          <input className="submitbtn" type="button" value="Send" ng-click="postData(title, description, image, price, date)" />
         </div>
-        <div>
-          <span>Item Description</span> <br><input required type="text" placeholder="Item description" ng-model="description" /> <br />
-        </div>
-        <div>
-          <span>Image Link</span><br><input required type="text" placeholder="Item image" /> <br />
-        </div>
-        <div>
-          <span>Item Price</span><br><input required type="text" placeholder="item price" /> <br />
-        </div>
-        <div>
-          <span>Log Date</span><br><input type="date" placeholder="Date listed" /> <br />
-        </div>  <br> 
-        <input className="submitBtn" type="submit"></input>   
-        <button>Submit</button> <br />
+        
     </form>
     </div>
   </body>
