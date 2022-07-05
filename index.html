@@ -20,11 +20,11 @@
         <br />
       </div>
       <form action="">
-        <div>
-          <span>Item Name</span> <br> <input required type="text" placeholder="Item name" ng-model="name" /> <br />
+        <div ng-controller="MyPostcontroller">
+          <span>Item Name</span> <br> <input required type="text" ng-model="title" /> <br />
         </div>
         <div>
-          <span>Item Description</span> <br><input required type="text" placeholder="Item description" /> <br />
+          <span>Item Description</span> <br><input required type="text" placeholder="Item description" ng-model="description" /> <br />
         </div>
         <div>
           <span>Image Link</span><br><input required type="text" placeholder="Item image" /> <br />

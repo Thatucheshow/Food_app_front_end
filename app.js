@@ -41,8 +41,16 @@ app.controller('MyPostcontroller', function($scope, $http) {
                 price: price,
                 
             };
-        $http.post('')    
-        }
+        $http.post('https://ancient-beach-68054.herokuapp.com/api/foods', JSON.stringify(data)).then(function (response) {
+            if (response.data)
+            $scope.msg = "Post Data Submitted Successfully!";
+        }, function (response) {
+            $scope.msg = "Service not Exists";
+            $scope.statusval = response.status;
+            $scope.statustext = response.statusText;
+            $scope.headers = response.headers();
+        })           
+        };
 
         
 
