@@ -2,5 +2,7 @@ body {
     background-color: rgb(212, 212, 225);
 }
 .food_image{
-    height: 20em;
+    height: 300px;
+    /* width: 300px; */
+   
 }
