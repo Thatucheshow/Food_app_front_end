@@ -40,7 +40,8 @@ app.controller('MyPostcontroller', function($scope, $http) {
                 image: image,
                 price: price,
                 
-            }
+            };
+        $http.post('')    
         }
 
         
