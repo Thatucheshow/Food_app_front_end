@@ -17,7 +17,7 @@
         <h3>{{food.description}}</h3>
         <h3> <span>Item Price:</span> <br> {{food.price}}</h3>
         <h3> <span>Date Item was added:</span> <br>{{food.date}}</h3>
-        <br />
+        <input type="button" value="Edit Item"> <br> <br>
       </div>
       <form action="">
         <div ng-controller="MyPostcontroller">
@@ -34,7 +34,7 @@
             <span>Item Price</span><br><input type="text" ng-model="price" /> <br />
           </div>
           <div>
-            <span>Log Date</span><br><input type="date"  ng-model="date" /> <br />
+            <span>Log Date</span><br><input type="text"  ng-model="date" /> <br />
           </div>  <br>  
           <input className="submitbtn" type="button" value="Send" ng-click="postData(title, description, image, price, date)" />
         </div>

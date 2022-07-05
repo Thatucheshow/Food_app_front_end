@@ -2,7 +2,7 @@
 
 'use strict'; 
 
-const app = angular.module('MyFoodApp', []);
+var app = angular.module('MyFoodApp', []);
 
 app.controller('MyFirstcontroller', function($scope, $http) {
     $scope.allData = "";
@@ -34,22 +34,21 @@ app.controller('MyPostcontroller', function($scope, $http) {
         $scope.price = null;
         $scope.date = null;
         $scope.postData = function (title, description, image, price, date) {
-            let data = {
+            var data = {
                 title: title,
                 description: description,
                 image: image,
                 price: price,
                 date: date                
             };
-        $http.post('https://ancient-beach-68054.herokuapp.com/api/foods', JSON.stringify(data)).then(function (response) {
-            if (response.data)
-            $scope.msg = "Post Data Submitted Successfully!";
-        }, function (response) {
-            $scope.msg = "Service not Exists";
-            $scope.statusval = response.status;
-            $scope.statustext = response.statusText;
-            $scope.headers = response.headers();
-        })           
+        $http({
+            method: 'POST',
+            url: 'https://ancient-beach-68054.herokuapp.com/api/foods',
+            data: data
+        }).then(response => {
+            $scope.post = response.data;
+            console.log($scope.data)
+        })     
         };
 
         
