@@ -16,6 +16,7 @@ const Add = (props) => {
     }
 
     return (
+        <>
             <form className='addPost' onSubmit={handleSubmit}>
                 <label htmlFor="title">Item name:</label> <br>
                 </br>
@@ -41,8 +42,9 @@ const Add = (props) => {
                 </br>
                 <input value={food.date} type="date" name="date" onChange={handleChange} />
                 <br />
-                <input type="submit" />
+                <input className='add_btn' type="submit" />
             </form>
+        </>
     )
 }
 

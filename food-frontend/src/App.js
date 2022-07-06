@@ -23,15 +23,16 @@ const getFoodData = () => {
 const handleCreate = (addFood) => {
   axios
   .post('https://ancient-beach-68054.herokuapp.com/api/foods', addFood)
-  .then(response => {
-    setFoods([...foods, response.data])
-    console.log(addFood)
+  .then(response => {  
+    console.log(response)
+    getFoodData()
   })
 }
 
 // ========EDIT FOOD DATA=======
 
 const handleUpdate = (editFood) => {
+  console.log(editFood)
   axios
   .put('https://ancient-beach-68054.herokuapp.com/api/foods/' + editFood.id, editFood)
   .then((response) => {
@@ -56,15 +57,14 @@ useEffect(() => {
 
   return (
     <div className="body">
-      <h1>Welcome</h1>
-      <h2>Add New Item</h2>
-      <Add handleCreate={handleCreate} />
+      <h1 className='title'>Food App</h1>
+      
       <div className='food_data'>
         {foods.map((food) => {
           return (
             <div className='food' key={food.id}>
               <h2>{food.title}</h2>
-              <img className='item_image' src={food.image} alt=''/>
+              <div id='item_image'><img className='item_image' src={food.image} alt=''/></div>
               <h2>{food.description}</h2>
               
               <h2>{food.price}</h2>
@@ -75,6 +75,10 @@ useEffect(() => {
             </div>
           )
         })}
+      </div>
+      <div className='add_form'>
+        <h2>Add New Item</h2>
+        <Add handleCreate={handleCreate} />
       </div>
       
     </div>

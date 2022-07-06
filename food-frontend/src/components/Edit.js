@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 
 const Edit = (props) => {
-    let emptyFood = {title: '', description: '', image: '', price: '', date: ''}
-
-    const [food, setFood] = useState(emptyFood)
-
+    const [food, setFood] = useState({...props.sleep})
 
     const handleChange = (event) => {
         setFood({...food, [event.target.name]: event.target.value})
